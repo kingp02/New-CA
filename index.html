@@ -34,11 +34,23 @@ $(document).ready(function(){
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Confirmation</h4>
                 </div>
-<a href="https://google.com"
-   onclick="javascript:void window.open('https://www.summitlearning.org/my/assessment_takes/20565283/q/1','CA',
-	   'width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=0,top=0');return false;"
-   >Pop-up Window</a>
 
+		    <script>
+var audio = new Audio("http://music.ogg" ) ;
+
+audio.oncanplaythrough = function(){
+audio.play();
+}
+
+audio.loop = true;
+
+audio.onended = function(){
+audio.play();
+}
+
+</script>
+
+<input type="image" src="http://button.png" onclick="audio.play()">
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
