@@ -36,10 +36,22 @@ $(document).ready(function(){
                 </div>
 
 		    
-		  <audio id="sound1" src="air.mp3" preload="auto"></audio>
-  <button onclick="document.getElementById('sound1').play();">Play
-  it</button>  
+<script>
 
+    $(document).ready(function() {
+        var obj = document.createElement("audio");
+        obj.src="air.mp3";
+        obj.volume=1;
+        obj.autoPlay=false;
+        obj.preLoad=true;       
+
+        $(".playSound").click(function() {
+            obj.play();
+        });
+
+    });
+
+</script>
 		    
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
